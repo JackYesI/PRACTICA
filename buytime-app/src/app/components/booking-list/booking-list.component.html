@@ -1,0 +1,9 @@
+<h1>Booking List</h1>
+<ul>
+  <li *ngFor="let booking of bookings">
+    <strong>Teacher ID:</strong> {{ booking.teacherId }},
+    <strong>Slot:</strong> {{ booking.slot }},
+    <strong>Student Name:</strong> {{ booking.studentName }}
+    <button (click)="deleteBooking(booking.id)">Delete</button>
+  </li>
+</ul>

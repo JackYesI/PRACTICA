@@ -1,0 +1,6 @@
+<div *ngFor="let booking of bookings">
+    <p>Викладач: {{ booking.teacherName }}</p>
+    <p>Час: {{ booking.slot }}</p>
+    <button (click)="cancelBooking(booking.id)">Скасувати</button>
+  </div>
+  

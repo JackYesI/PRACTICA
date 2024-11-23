@@ -1,0 +1,16 @@
+<h1>Student Registration</h1>
+<form (submit)="register()">
+  <label>
+    Username:
+    <input [(ngModel)]="username" required />
+  </label>
+  <label>
+    Password:
+    <input type="password" [(ngModel)]="password" required />
+  </label>
+  <label>
+    Full Name:
+    <input [(ngModel)]="fullName" required />
+  </label>
+  <button type="submit">Register</button>
+</form>

@@ -1,0 +1,8 @@
+<div *ngFor="let teacher of teachers">
+    <h3>{{ teacher.name }}</h3>
+    <p>{{ teacher.description }}</p>
+    <button *ngFor="let slot of teacher.timeslots" (click)="bookSlot(teacher.id, slot)">
+      Забронювати {{ slot }}
+    </button>
+  </div>
+  

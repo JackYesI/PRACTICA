@@ -1,0 +1,19 @@
+<h2>Профіль викладача</h2>
+
+<h3>Створення нової зустрічі:</h3>
+<form (submit)="createMeeting()">
+  <label>День:</label>
+  <input type="text" [(ngModel)]="newMeeting.day" name="day" required />
+  <label>Час:</label>
+  <input type="time" [(ngModel)]="newMeeting.time" name="time" required />
+  <label>Опис:</label>
+  <input type="text" [(ngModel)]="newMeeting.description" name="description" required />
+  <button type="submit">Створити зустріч</button>
+</form>
+
+<h3>Ваші зустрічі:</h3>
+<ul>
+  <li *ngFor="let meeting of meetings">
+    {{ meeting.day }} о {{ meeting.time }} — {{ meeting.description }}
+  </li>
+</ul>

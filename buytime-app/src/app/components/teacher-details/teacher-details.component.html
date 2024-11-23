@@ -1,0 +1,10 @@
+<h1>{{ teacher?.displayName }}</h1>
+<p>Schedule Type: {{ teacher?.scheduleType }}</p>
+
+<h3>Available Time Slots</h3>
+<ul>
+  <li *ngFor="let slot of teacher?.availableSlots">
+    {{ slot }}
+    <button (click)="bookSlot(slot)">Book</button>
+  </li>
+</ul>
